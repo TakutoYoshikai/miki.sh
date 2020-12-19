@@ -1,0 +1,11 @@
+#!/bin/bash
+
+zip -r data.zip $2
+mkdir tmp
+mv data.zip tmp
+unzip $1 -d tmp
+cd tmp
+zip -0r ../new.xlsx *
+cd ..
+rm -rf tmp
+
