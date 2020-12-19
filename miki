@@ -5,7 +5,7 @@ mkdir tmp
 mv data.zip tmp
 unzip $1 -d tmp
 cd tmp
-zip -0r ../new.xlsx *
+zip -0r ../new.${1##*.} *
 cd ..
 rm -rf tmp
 
